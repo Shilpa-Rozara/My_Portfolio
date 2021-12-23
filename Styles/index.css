@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
+
+
+/* declaring variables so that we can use these again and again*/
+:root{
+    --background-color: #333647;
+    --pink-color:#F87652;
+    --secondary-color:#bbbbbb;
+    --bg-color-of-lists-in-skill-section:#81818180;
+}
+/* globally use font-family */
+ *{
+    font-family: 'Poppins', sans-serif;
+ }
+
+ body{
+     background-color: var(--background-color) !important;
+ }
+ h1, h2, h3, h4, h5, h6, p, span, td, a{
+     cursor: pointer;
+ }
+ canvas.particles-js-canvas-el{
+     position: absolute;
+     height: 100% !important;
+     width: 100%;
+     top: 0;
+     right: 0;
+     left: 0;
+     z-index: -1000;
+     margin: 0px;
+ }
+ /* navbar---styling */
+
+ .nav-section .navbar-brand{
+     font-size: 22px;
+     color: white;
+ }
+ .nav-section .navbar-brand span{
+     color: var(--pink-color);
+
+ }
+ .nav-section .navbar-nav li{
+     margin: 0px, 8px;
+ }
+ .nav-section .navbar-nav li a {
+    color: white !important;
+    font-size: 15px;
+}
+/* this is for small underline */
+.nav-section .navbar-nav li ::before{
+    content: '';
+    width: 0px;
+    height: 0px;
+    background-color: white;
+    position: absolute;
+    bottom: 7px;
+    transition: 0.5s;
+}
+.nav-section .navbar-nav li:hover ::before{
+    content: '';
+    width: 17px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 7px;
+    
+}
+.hero-section{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.hero-section .row h1,h2,h3,p{
+    color: white;
+}
+.hero-section .row h3{
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.hero-section .row h3::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-left: 6px;
+}
+.hero-section .row h1{
+    font-size: 55px;
+    font-weight: 600;
+}
+.hero-section .row h2{
+    font-size: 20px;
+    font-weight: 100;
+    margin: 8px 0px;
+}
+.hero-section .row p{
+    font-size: 13px;
+    margin: 13px;
+    line-height: 21px;
+    color: var(--secondary-color);
+
+}
+.hero-section .row button{
+    border-radius: 10px;
+    font-size: 19px;
+    color: white;
+    background-color: var(--pink-color);
+    border: 3px solid var(--pink-color);
+    width: 112px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+.hero-section .row button:hover{
+    animation: swing;
+    animation-duration: 00.5s;
+    background: white;
+    border: white;
+   color: black; 
+}
+.hero-section .row img{
+    width: 80%;
+    margin-bottom: 10px;
+}
+@media(max-width : 1200px) and (min-width: 993px){
+    .hero-section .row h1{
+        font-size: 58px;
+    }
+
+}
+@media(max-width : 993px) and (min-width: 763px){
+    .hero-section .row h1{
+        font-size: 35px;
+    }
+    .hero-section .row h2{
+        font-size: 15px;
+    
+    }
+    .hero-section .row p{
+        font-size: 11px;
+
+    }
+    .hero-section .row h3{
+        font-size: 15px;
+    }
+    .hero-section .row button{
+        font-size: 15px;
+    }
+}
+@media(max-width : 763px) and (min-width: 500px){
+    .hero-section{
+        margin: 135px 0px;
+    }
+    .hero-section .row h1{
+        font-size: 35px;
+        text-align: center;
+    }
+    .hero-section .row h2{
+        font-size: 15px;
+        text-align: center;
+    
+    }
+    .hero-section .row p{
+        font-size: 11px;
+        text-align: center;
+
+    }
+    .hero-section .btn-container{
+        justify-content: center;
+        text-align: center;
+    }
+    .hero-section .row h3{
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .hero-section .row h3 ::after{
+        width: 0px;
+    }
+    .hero-section .btn-container button{
+         width: 100px;
+         height: 43px;
+         font-size: 15px;
+         text-align: center;
+        
+    }
+    .hero-section img{
+        width: 60%;
+        margin-top: 20px;
+    }
+}
+/* About us section */
+.about-section{
+    background-color: #282A39;
+    padding: 170px 0px;
+}
+.about-section #heading {
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    line-height: 57px;
+}
+.about-section .lets-talk{
+    color: white;
+    font-weight: 400;
+    margin-top: 14px;
+}
+.about-section #gmail{
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--pink-color);
+    margin-top: 35px;
+    word-spacing: 6px;
+}
+.about-section .contact-info{
+    margin-top: 15px;
+
+}
+.about-section .contact-info h5{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    word-spacing: 6px;
+}
+.about-section .about-me-right-section #txt{
+    font-size: 15px;
+    margin-top: 13px;
+    line-height: 25px;
+    color: var(--secondary-color);
+}
+.about-section .about-me-right-section hr{
+    margin: 0px;
+    border: 0.5px solid var(--pink-color);
+    width: 6rem;
+}
+.about-section .about-me-right-section table td{
+    border: none;
+    color: white;
+    font-size: 13px;
+}
+.about-section .about-me-right-section button{
+    border-radius: 7px;
+    font-size: 15px;
+    color: white;
+    background-color: var(--pink-color);
+    border: 3px solid var(--pink-color);
+    font-family: 'Poppins', sans-serif;
+     margin-top: 10px;
+}
+.about-section .about-me-right-section button:hover{
+    animation: swing;
+    animation-duration: 0.5s;
+}
+@media(max-width: 903px) and(min-width: 768px){
+    .about-section .about-me-right-section #txt{
+        font-size: 12px;
+    }
+    .about-section #heading{
+        font-size: 28px !important;
+    }
+}
+
+/* skill-section */
+.skill-section{
+    padding: 100px 0px;
+}
+.skill-section-left-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skill-section #heading{
+    font-weight: 600;
+    font-size: 50px;
+}
+.skill-section hr{
+    margin: 12px 0px;
+    border: 0.5px solid var(--pink-color);
+    width: 6rem;
+}
+.skill-section p{
+    color: var(--secondary-color);
+    font-size: 13px;;
+}
+.skill-section .social-media-icons .list-group-item{
+    border:none;
+    color: white;
+    border-left: 2px solid var(--pink-color);
+    border-radius: 0px;
+    margin:5px 0px;
+    width: 200px;
+    background: var(--bg-color-of-lists-in-skill-section);
+    font-size: 14px;
+
+}
+.skill-section .social-media-icons .list-group-item a{
+    transition: 0.5s;
+}
+.skill-section .social-media-icons .list-group-item:hover a{
+    margin-left: 10px;
+}
+.skill-section-right-section .each-skill{
+    margin: 25px 0px;
+}
+.skill-section-right-section .each-skill span{
+    color: white;
+}
+.skill-section-right-section .each-skill .progress{
+    background:var(--bg-color-of-lists-in-skill-section);
+    border-radius: 100px;
+    margin-top: 3px;
+    height: 10px;
+}
+.skill-section-right-section .each-skill .progress-bar{
+    background-color: var(--pink-color) !important;
+
+}
+
+/*Portfolio-section*/
+.portfolio-section{
+    background: #282A39;
+    padding: 170px 0px;
+}
+.portfolio-section .nav-tabs{
+    border: none;
+    width: 30%;
+    text-align: center;
+}
+.portfolio-section .nav-tabs .nav-link.active{
+    border: none;
+    color: white;
+    border-bottom: 2px solid var(--pink-color) !important;
+    background: transparent;
+}
+.portfolio-section .nav-tabs .nav-link.active:hover{
+    border-bottom:2px solid var(--pink-color) !important ;
+}
+.portfolio-section .nav-tabs .nav-item.show .nav-link{
+font-weight: 400;
+font-size: 14px;
+background: transparent !important;
+}
+.portfolio-section .nav-tabs .nav-link:hover{
+    border: none;
+}
+.portfolio-section .tab-content .card img{
+    border:2px solid white;
+}
+
+
+
+
+ 
+
+
